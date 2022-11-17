@@ -5,13 +5,15 @@ const DOMSelectors = {
   url: document.getElementById("url"),
   display: document.getElementById("display"),
 };
-
-function makeCard(backgroundimage, text) {
-  backgroundimage.style.backgroundImage = `${DOMSelectors.url}`;
-  text.innerHTML = `${DOMSelectors.title}`;
-  text.innerHTML = `${DOMSelectors.artist}`;
-}
-
+/*  
+function makeCard(background, title, artist) {
+  background.style.backgroundImage = `${DOMSelectors.url}`;
+  title.textContent = `${DOMSelectors.title}`;
+  artist.textContent = `${DOMSelectors.artist}`;
+} 
+ */
 DOMSelectors.button.addEventListener("click", function () {
-  makeCard(DOMSelectors.display);
-});
+  DOMSelectors.display.insertAdjacentHTML("afterend", 
+  `<p>${title}</p>
+  <p>${artist}</p>`)
+}); 
