@@ -5,17 +5,25 @@ body,
   font-size: 10px;
   padding: 0;
   margin: 0;
+  font-family: "Bitter", serif;
 }
 body {
-  background-color: antiquewhite;
+  background-color: #faebd7;
   text-align: center;
 }
 label {
   font-size: 2.5rem;
+  font-weight: bold;
+}
+input {
+  font-weight: bold;
 }
 h1 {
   margin-top: 0;
   font-size: 7.594rem;
+}
+h2 {
+  font-size: 5rem;
 }
 #form {
   display: flex;
@@ -72,10 +80,9 @@ h1 {
 
 .display {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 90vw;
+  width: 30%;
   margin: 2rem auto;
 }
 .display-card {
@@ -83,25 +90,33 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   width: 26%;
-  height: 55rem;
-  margin: 1rem auto;
+  height: 60rem;
+  margin: 2rem auto;
   background-color: #131313;
   color: white;
   align-items: center;
+  border: solid 1rem #f1c893;
+  border-radius: 2rem;
 }
 .display-img {
-  width: 100%;
-  height: auto;
+  height: 70%;
+  margin: 2rem auto;
+  border-radius: 2rem;
 }
-.display-artist,
 .display-album {
-  font-size: var(--h3);
+  font-size: 3rem;
+}
+.display-artist {
+  font-size: 2rem;
+  font-weight: 500;
 }
 .remove {
   padding: 1rem 2rem;
   display: inline-block;
   margin: 1rem;
-  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
   border: none;
   background-color: red;
   color: white;
