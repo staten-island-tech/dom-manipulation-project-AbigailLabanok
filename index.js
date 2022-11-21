@@ -27,9 +27,9 @@ function makeCard() {
   DOMSelectors.artist.value = "";
   DOMSelectors.url.value = "";
   function removeCard() {
-    DOMSelectors.display.removeChild(displayCard);
+    displayCard.remove();
   }
-  DOMSelectors.removeButton.addEventListener("click", removeCard);
+  removeButton.addEventListener("click", removeCard);
 }
 
 /* function removeCard() {
