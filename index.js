@@ -11,7 +11,7 @@ function makeCard() {
   let artist = DOMSelectors.artist.value;
   let url = DOMSelectors.url.value;
   DOMSelectors.display.insertAdjacentHTML(
-    "afterend",
+    "beforeend",
     `<div class="display-card">
           <img class="display-img" src="${url}"/>
           <h2 class="display-album">${title}</h2>
