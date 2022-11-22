@@ -32,19 +32,11 @@ h2 {
   align-items: center;
   height: 50vh;
 }
-.user-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
 .text-box {
   width: 22rem;
   height: 2.5rem;
   font-size: 2rem;
+  border-radius: 0.5rem;
 }
 .form-input {
   display: flex;
@@ -78,7 +70,7 @@ h2 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
 }
 
-.display {
+/* .display {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -96,6 +88,25 @@ h2 {
   align-items: center;
   border: solid 1rem #f1c893;
   border-radius: 2rem;
+} */
+
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.display-card {
+  font-size: 8rem;
+  background-color: #131313;
+  color: white;
+  border: solid 1rem #f1c893;
+  border-radius: 2rem;
+  width: 30%;
+  height: 60rem;
+  margin: 2rem auto;
+  padding: 15px;
+  text-align: center;
 }
 .display-img {
   height: 70%;
