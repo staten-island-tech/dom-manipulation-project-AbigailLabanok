@@ -70,26 +70,6 @@ h2 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
 }
 
-/* .display {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.display-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30%;
-  height: 60rem;
-  margin: 2rem auto;
-  background-color: #131313;
-  color: white;
-  align-items: center;
-  border: solid 1rem #f1c893;
-  border-radius: 2rem;
-} */
-
 .display {
   display: flex;
   justify-content: space-around;
