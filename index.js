@@ -4,16 +4,12 @@ const DOMSelectors = {
   artist: document.getElementById("artist"),
   url: document.getElementById("url"),
   display: document.getElementById("display"),
-  removeButton: document.querySelector(".remove btn"),
-  displayCard: document.querySelector(".display-card"),
 };
 
 function makeCard() {
   let title = DOMSelectors.title.value;
   let artist = DOMSelectors.artist.value;
   let url = DOMSelectors.url.value;
-  const removeButton = document.querySelector(".remove btn");
-  const displayCard = document.querySelector(".display-card");
   DOMSelectors.display.insertAdjacentHTML(
     "afterend",
     `<div class="display-card">
@@ -26,16 +22,18 @@ function makeCard() {
   DOMSelectors.title.value = "";
   DOMSelectors.artist.value = "";
   DOMSelectors.url.value = "";
-  function removeCard() {
-    displayCard.remove();
-  }
-  removeButton.addEventListener("click", removeCard);
+
+  const removeButton = document.querySelector(".remove");
+  removeButton.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+      const button = event.target;
+      const card = button.parentNode;
+      const display = card.parentNode;
+      if (button.textContent === "Remove Album") {
+        display.removeChild(card);
+      }
+    }
+  });
 }
 
-/* function removeCard() {
-  DOMSelectors.display.removeChild(displayCard);
-} */
-
 DOMSelectors.button.addEventListener("click", makeCard);
-
-/* DOMSelectors.removeButton.addEventListener("click", removeCard); */

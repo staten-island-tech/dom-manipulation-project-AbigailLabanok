@@ -2,7 +2,7 @@ html,
 body,
 * {
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 62.5%;
   padding: 0;
   margin: 0;
   font-family: "Bitter", serif;
@@ -80,16 +80,15 @@ h2 {
 
 .display {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  width: 30%;
-  margin: 2rem auto;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .display-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 26%;
+  width: 30%;
   height: 60rem;
   margin: 2rem auto;
   background-color: #131313;
