@@ -6,12 +6,20 @@ const DOMSelectors = {
   display: document.getElementById("display"),
 };
 
+DOMSelectors.button.addEventListener("click", card);
+
+function card() {
+  makeCard();
+  clearFields();
+  deleteCard();
+}
+
 function makeCard() {
   let title = DOMSelectors.title.value;
   let artist = DOMSelectors.artist.value;
   let url = DOMSelectors.url.value;
   DOMSelectors.display.insertAdjacentHTML(
-    "afterend",
+    "beforeend",
     `<div class="display-card">
           <img class="display-img" src="${url}"/>
           <h2 class="display-album">${title}</h2>
@@ -19,21 +27,18 @@ function makeCard() {
           <button class="remove btn">Remove Album</button>
       </div>`
   );
+};
+
+function clearFields() {
   DOMSelectors.title.value = "";
   DOMSelectors.artist.value = "";
   DOMSelectors.url.value = "";
-
-  const removeButton = document.querySelector(".remove");
-  removeButton.addEventListener("click", (event) => {
-    if (event.target.tagName === "BUTTON") {
-      const button = event.target;
-      const card = button.parentNode;
-      const display = card.parentNode;
-      if (button.textContent === "Remove Album") {
-        display.removeChild(card);
-      }
-    }
-  });
 }
 
-DOMSelectors.button.addEventListener("click", makeCard);
+function deleteCard() {
+  const removeButtons = document.querySelectorAll(".remove");
+  removeButtons.forEach((removeButton) => 
+   removeButton.addEventListener("click", function(event) {
+    event.target.parentElement.remove();
+  }))
+}
